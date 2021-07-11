@@ -1,4 +1,4 @@
-# IITK Coin
+# IITK Convolutional Network for Video Understanding
 ## SnT Project 2021, Brain Cognitive Society
 
 This repository contains the code for the IITK Coin project done so far.
