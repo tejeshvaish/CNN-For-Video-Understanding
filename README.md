@@ -1,4 +1,4 @@
-#  Convolutional Network for Video Understanding
+#  Convolutional Neural Network for Video Understanding
 ## SnT Project 2021, Brain Cognitive Society
 
 This repository contains the code for this project done so far.
