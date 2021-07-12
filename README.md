@@ -32,9 +32,11 @@ The First Model utilizes the VGG16 architecture to extract the spatial and tempo
 
 
 
-### Conv + LSTM
-This was the second model that I Implemented in my learning process to classify video:
-This model basically had Conv + LSTM , conv to explicitely exploit spatial features while LSTM efficiently utilises temporal features. 
+### CNN + LSTM
+-[Inspired from](https://github.com/HHTseng/video-classification)
+This was the second model that I Implemented in my learning process to classify video: 
+This model basically had CNN + LSTM , conv to explicitely exploit spatial features while LSTM efficiently utilises temporal features. 
+
 
 In CNN-LSTM we have two different modules which are combined together. The CNN is a regular CNN which acts as a 'spatial feature extractor'. The output of the CNN is multiplied by the LSTM cell to learn the 'temporal features'.
 
