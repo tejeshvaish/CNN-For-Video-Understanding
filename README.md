@@ -12,17 +12,24 @@ This repository contains the code for this project done so far.
 This is the repository which implements late temporal modeling on top of the 3D CNN architectures and mainly focus on BERT for this aim.
 
 ## Environment 
-python 3.6.4
-tensorflow 1.x
-keras>=2.0.0
-pytest>=3.0.3
-pytest-cov>=2.4.0
-pytest-xdist>=1.15.0
+- python 3.6.4
+- tensorflow 1.x
+- keras>=2.0.0
+- pytest>=3.0.3
+- pytest-cov>=2.4.0
+- pytest-xdist>=1.15.0
+- basically a normal colab environment 
 
 ## DataSet
-The Biggest Hurdle I faced while implementing the paper or any 2D/3D CNN for that matter was the video dataset , It was extremenly difficult to parse the dataset and load it into different different frames which would them be sent into our model, where then the last TGAP layer of the model then use to average the score of each of the frame to get the Actual classification of the model. 
+The Biggest Hurdle we faced while implementing the paper or any 2D/3D CNN for that matter was the video dataset , It was extremenly difficult to parse the dataset and load it into different different frames which would them be sent into our model, where then the last TGAP layer of the model then use to average the score of each of the frame to get the Actual classification of the model. 
 
-So, Finally I Used many methods to accomplish this task, one of them was to convert the video into images which are then normalized and then transformed into a numpy array which can be given as input to our model to get the result. 
+So, Finally I Used many methods to accomplish this task, one of them was to convert the video into many frames which are then normalized and then transformed into a numpy array which can be given as input to our model to get the result.  
+
+* For the first implementation I used UCF101 dataset and trained the model on just 10% of it(due to lack of GPUs , RAM and time).
+
+* For the second implementaton I again used HMDB51 dataset and then extracted it, and then passed it batch fram wise through a CNN+LSTM model we got 67% accuracy by trainin it on just 1/5 of one of the three split of HMDB51 dataset. 
+
+* For third implementation I used glucon and mxnet library which has prewritten script to download and extract hmdb51 dataset and then used it on 3D resNeXt model.
 
 
 # Model Architecture and Details
@@ -31,6 +38,7 @@ I implemented many models including  VGG(pretrained) with 4 FC layers on top of 
 
 ## 1.VGG16 + 4 FC layers
 ![image](https://user-images.githubusercontent.com/55567070/125229053-8fa7c800-e2f3-11eb-8a27-43c9fa290a24.png)
+
 -[Inspired from](https://github.com/chen0040/keras-video-classifier)
 The First Model utilizes the VGG16 architecture to extract the spatial and temporal features out of the frames of the video and Then several softmax, Relu layer
 This model is basically a simple 2D CNN architecture which is trained on frames of the video and then use to classify them and taking the average over all the frames of the video. -[ref2](https://towardsdatascience.com/transfer-learning-with-vgg16-and-keras-50ea161580b4)
@@ -39,12 +47,14 @@ Result : By this Method , we were getting 27% accuracy on UCF101 dataset(because
 
 
 ## 2.CNN + LSTM
--[Inspired from](https://github.com/HHTseng/video-classification)
-This was the second model that I Implemented in my learning process to classify video: 
+-[Inspired from here](https://github.com/HHTseng/video-classification)
+
+- This was the second model that I Implemented in my learning process to classify video: 
 This model basically had CNN + LSTM , conv to explicitely exploit spatial features while LSTM efficiently utilises temporal features. 
 
 In CNN-LSTM we have two different modules which are combined together. The CNN is a regular CNN which acts as a 'spatial feature extractor'. The output of the CNN is multiplied by the LSTM cell to learn the 'temporal features'.
 We implemented this, as it was the foundation for the future work for Action recognition task, because in our 3rd implementation we were using *BERT* which is a much better version of LSTM to do the job with 3D CNN. 
+
 
 ![image](https://user-images.githubusercontent.com/55567070/125219543-8cf0a700-e2e2-11eb-8eb7-ae8113f9cfd5.png)
 
