@@ -72,8 +72,8 @@ But, it was very difficult to pass the Video data through the 3D CNN architectur
 All the ipynb files of the task that we did are in their respective folder 
 
 To Run any script just open it in colab and install the necessary packages which are already mentioned there. 
-- It will take  2 hrs to train first model on 10% of the ucf101 dataset.( time is less cause we imported the VGG16 pretrained on imagenet dataset)
-- 24 hrs to run the second model on HMDB51 dataset. 
+- It will take  2 hrs to train first model on 10% of the split 1 of ucf101 dataset.( time is less cause we imported the VGG16 pretrained on imagenet dataset)
+- 24 hrs to run the second model on HMDB51 dataset ( 2 hrs to train on 20% of the HMDB51 dataset). 
 - Still in progress, we have implemented resneXt101 architecture till now, and are going to train it on UCF101 dataset, this part is complex due to the fact that we are using 3D CNNs
 
 ## Individual Contribution: 
