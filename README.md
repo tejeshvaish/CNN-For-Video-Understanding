@@ -76,3 +76,16 @@ To Run any script just open it in colab and install the necessary packages which
 - 24 hrs to run the second model on HMDB51 dataset. 
 - Still in progress, we have implemented resneXt101 architecture till now, and are going to train it on UCF101 dataset, this part is complex due to the fact that we are using 3D CNNs
 
+## Individual Contribution: 
+            Week 1-4   week 4-6   week 7-8 
+Tejesh 
+Saloni
+Nikita
+
+| Weeks | 1-2 | 3-4 | 5-6 | 7-8 |
+| ------------- | ------------- |------------- |------------- |------------- |
+| Tejesh  | Did the Prework part , completed various exercises of ML crash course while doing probability side wise | In week 3-4 I completed Kaggle and image classification crash course and tried my hands on tensorflow and pytorch  |   |Content Cell  |
+| Saloni  | Content Cell  |Content Cell  |Content Cell  |Content Cell  |
+| Nikita  | Content Cell  |Content Cell  |Content Cell  |Content Cell  |
+
+
