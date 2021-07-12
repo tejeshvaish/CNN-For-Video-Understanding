@@ -55,6 +55,8 @@ This model basically had CNN + LSTM , conv to explicitely exploit spatial featur
 In CNN-LSTM we have two different modules which are combined together. The CNN is a regular CNN which acts as a 'spatial feature extractor'. The output of the CNN is multiplied by the LSTM cell to learn the 'temporal features'.
 We implemented this, as it was the foundation for the future work for Action recognition task, because in our 3rd implementation we were using *BERT* which is a much better version of LSTM to do the job with 3D CNN. 
 
+We are getting 67% accuracy by using this simple approach on HMDB51 dataset. 
+
 
 ![image](https://user-images.githubusercontent.com/55567070/125219543-8cf0a700-e2e2-11eb-8eb7-ae8113f9cfd5.png)
 
