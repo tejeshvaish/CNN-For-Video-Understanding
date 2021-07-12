@@ -13,6 +13,11 @@ This is the repository which implements late temporal modeling on top of the 3D 
 
 ## Environment 
 python 3.6.4
+tensorflow 1.x
+keras>=2.0.0
+pytest>=3.0.3
+pytest-cov>=2.4.0
+pytest-xdist>=1.15.0
 
 ## DataSet
 The Biggest Hurdle I faced while implementing the paper or any 2D/3D CNN for that matter was the video dataset , It was extremenly difficult to parse the dataset and load it into different different frames which would them be sent into our model, where then the last TGAP layer of the model then use to average the score of each of the frame to get the Actual classification of the model. 
