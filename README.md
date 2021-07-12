@@ -61,7 +61,10 @@ We implemented this, as it was the foundation for the future work for Action rec
 ## 3.Late Temporal Modeling in 3D CNN Architecture with BERT for Action Recognition - [here](https://arxiv.org/pdf/2008.01232.pdf) 
 
 In this paper we had to implement 3D CNN architecture with its TGAP layer replaced with BERT so as to classify the video.  
+![image](https://user-images.githubusercontent.com/55567070/125246798-e0c5b500-e30f-11eb-9c20-dcf8436b5e80.png)
+
 ![image](https://user-images.githubusercontent.com/55567070/125230362-41e08f00-e2f6-11eb-8ec4-62c7fed26389.png)
+
 this Implementation was extremely difficult for us due to the use of 3D CNN , we are able to reach till the model architecture implementation of the ResneXt 3D CNN.
 
 But, it was very difficult to pass the Video data through the 3D CNN architecture, and we are currently stucked at this point. 
