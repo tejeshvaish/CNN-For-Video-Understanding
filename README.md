@@ -28,7 +28,7 @@ I implemented many models including  VGG(pretrained) with 4 FC layers on top of 
 ![image](https://user-images.githubusercontent.com/55567070/125229053-8fa7c800-e2f3-11eb-8a27-43c9fa290a24.png)
 -[Inspired from](https://github.com/chen0040/keras-video-classifier)
 The First Model utilizes the VGG16 architecture to extract the spatial and temporal features out of the frames of the video and Then several softmax, Relu layer
-This model is basically a simple 2D CNN architecture which is trained on frames of the video and then use to classify them and taking the average over all the frames of the video. ![ref2](https://towardsdatascience.com/transfer-learning-with-vgg16-and-keras-50ea161580b4)
+This model is basically a simple 2D CNN architecture which is trained on frames of the video and then use to classify them and taking the average over all the frames of the video. -[ref2](https://towardsdatascience.com/transfer-learning-with-vgg16-and-keras-50ea161580b4)
 
 Result : By this Method , we were getting 27% accuracy on UCF101 dataset(because I was just able to use 10% of train data to train my model), while the official implementation was giving 44% accuracy, we Implemented this , as this was the first thing which would come to someones mind, if one has to do Action Recognition. 
 
