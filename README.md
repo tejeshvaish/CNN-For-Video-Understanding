@@ -14,10 +14,7 @@ This is the repository which implements late temporal modeling on top of the 3D 
 ## Environment 
 - python 3.6.4
 - tensorflow 1.x
-- keras>=2.0.0
-- pytest>=3.0.3
-- pytest-cov>=2.4.0
-- pytest-xdist>=1.15.0
+- keras>=2
 - basically a normal colab environment 
 
 ## DataSet
@@ -40,6 +37,7 @@ I implemented many models including  VGG(pretrained) with 4 FC layers on top of 
 ![image](https://user-images.githubusercontent.com/55567070/125229053-8fa7c800-e2f3-11eb-8a27-43c9fa290a24.png)
 
 -[Inspired from](https://github.com/chen0040/keras-video-classifier)
+This model was just a started for my actual work. I learned how the pytorch works, how to build working model. 
 The First Model utilizes the VGG16 architecture to extract the spatial and temporal features out of the frames of the video and Then several softmax, Relu layer
 This model is basically a simple 2D CNN architecture which is trained on frames of the video and then use to classify them and taking the average over all the frames of the video. -[ref2](https://towardsdatascience.com/transfer-learning-with-vgg16-and-keras-50ea161580b4)
 
@@ -50,6 +48,8 @@ Result : By this Method , we were getting 27% accuracy on UCF101 dataset(because
 -[Inspired from here](https://github.com/HHTseng/video-classification)
 
 - This was the second model that I Implemented in my learning process to classify video: 
+- This is main working modl which gave 67% accuracy on hMDB51 dataset. 
+
 This model basically had CNN + LSTM , conv to explicitely exploit spatial features while LSTM efficiently utilises temporal features. 
 
 In CNN-LSTM we have two different modules which are combined together. The CNN is a regular CNN which acts as a 'spatial feature extractor'. The output of the CNN is multiplied by the LSTM cell to learn the 'temporal features'.
@@ -65,7 +65,9 @@ In this paper we had to implement 3D CNN architecture with its TGAP layer replac
 
 ![image](https://user-images.githubusercontent.com/55567070/125230362-41e08f00-e2f6-11eb-8ec4-62c7fed26389.png)
 
-this Implementation was extremely difficult for us due to the use of 3D CNN , we are able to reach till the model architecture implementation of the ResneXt 3D CNN.
+this Implementation was extremely difficult for me due to the use of 3D CNN , I tried to implement the model and Took a look at some github repos regarding it. But, this was just an optional part for my project.
+
+<!-- we are able to reach till the model architecture implementation of the ResneXt 3D CNN. -->
 
 But, it was very difficult to pass the Video data through the 3D CNN architecture, and we are currently stucked at this point. 
 
