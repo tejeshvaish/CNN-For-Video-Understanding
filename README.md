@@ -22,7 +22,7 @@ The Biggest Hurdle we faced while implementing the paper or any 2D/3D CNN for th
 
 So, Finally I Used many methods to accomplish this task, one of them was to convert the video into many frames which are then normalized and then transformed into a numpy array which can be given as input to our model to get the result.  
 
-* For the first implementation I used UCF101 dataset and trained the model on just 10% of it(due to lack of GPUs , RAM and time).
+* For the first implementation I Played with UCF101 dataset and trained the model on just 10% of it(due to lack of GPUs , RAM and time).
 
 * For the second implementaton I again used HMDB51 dataset and then extracted it, and then passed it batch fram wise through a CNN+LSTM model we got 67% accuracy by trainin it on just 1/5 of one of the three split of HMDB51 dataset. 
 
